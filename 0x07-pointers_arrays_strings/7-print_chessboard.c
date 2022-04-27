@@ -1,25 +1,22 @@
 #include "main.h"
 
 /**
- * print_chessboard - prints the chessboard
- * @a: input pointer.
- * Return: no return.
+ * print_chessboard - prints buffer in hexa
+ * @a: cheese
+ * needle: buffer2
+ *
+ * Return: Nothing.
  */
 void print_chessboard(char (*a)[8])
 {
-	int i, m;
+	int i, j;
 
-	i = 0;
-
-	while (i < 8)
+	for (i = 0; i < 8; i++)
 	{
-		m = 0;
-		while (m < 8)
+		for (j = 0; j < 8; j++)
 		{
-			_putchar(a[i][m]);
-			m++
+			_putchar (a[i][j]);
 		}
-		_putchar('\n');
-		i++;
-	}
+	_putchar('\n');
+		}
 }
