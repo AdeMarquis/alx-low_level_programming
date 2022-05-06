@@ -1,4 +1,4 @@
 #!/bin/bash
--Wall -Wereor -Wextra *.c
-ar cr liball.a *.o
+-wall -werror -wextra *.c
+ar rc liball.a *.o
 ranlib liball.a
