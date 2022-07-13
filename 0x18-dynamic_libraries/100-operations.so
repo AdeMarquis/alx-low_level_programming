@@ -1,0 +1,15 @@
+from ctypes import *
+libDynamic = CDLL("./libdynamic.so")
+ 
+#call C function to check connection
+libDynamic.connect() 
+ 
+#calling randNum() C function
+#it returns random number
+varRand = libDynamic.randNum()
+print "Random Number:", varRand, type(varRand)
+ 
+#calling addNum() C function
+#it returns addition of two numbers
+varAdd = libDynamic.addNum(20,30)
+print "Addition : ", varAdd
